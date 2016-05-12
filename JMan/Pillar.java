@@ -1,7 +1,11 @@
 import java.awt.Color;
-
+/**
+ * 
+ * @author Nuttapatprom Chongamorkulprapa
+ *
+ */
 public class Pillar extends Piece {
-	
+	//Constructor
 	public Pillar(int x, int y, int c, Map m) {
 		super(Piece.PILLAR, m);
 		this.setX(x);
@@ -14,14 +18,14 @@ public class Pillar extends Piece {
 			this.setColor(Color.YELLOW);
 		}
 	}
-
+	//constructor
 	public Pillar(int x, int y, Color c, Map m) {
 		super(Piece.PILLAR, m);
 		this.setX(x);
 		this.setY(y);
 		this.setColor(c);
 	}
-
+	//set color in play game
 	@Override
 	public void act() {
 		if (!this.hasActed()) {
@@ -35,9 +39,7 @@ public class Pillar extends Piece {
 				else if (randColor == 2)
 					this.setColor(Color.GREEN);
 			}
-			else{
-				this.setActed(true);
-			}
+			this.setActed(true);
 		}
 	}
 

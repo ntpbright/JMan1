@@ -226,6 +226,7 @@ public class Map implements ActionListener {
 			for (int j = 0; j < height; j = j + 1) {
 				if (!isEmpty(i, j)) {
 					Piece p = grid[i][j];
+					p.act();
 					p.setActed(true);
 				}
 			}
